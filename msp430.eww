@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\freertos_demo\freertos_demo.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\hello\hello.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\ucos_demo\ucos_demo.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

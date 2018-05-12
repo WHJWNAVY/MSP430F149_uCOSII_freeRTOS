@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>2555659384</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mem.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mutex.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_q.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_sem.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpu_core.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\ystdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_task.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\app_hooks.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_sem.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_tmr.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\app_hooks.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\cpu_core.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_flag.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_task.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mutex.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdarg.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_time.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_core.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_q.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mbox.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mem.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp.pbi</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uC-LIB\lib_def.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\app.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_core.pbi</file>
+            <file>$PROJ_DIR$\OS2\os_cfg.h</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_cpu.h</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\ucos_ii.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uC-CPU\MSP430\cpu.h</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_task.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_cpu_a.s43</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_cpu_c.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_tmr.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_sem.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_q.c</file>
+            <file>$PROJ_DIR$\BSP\bsp.h</file>
+            <file>$PROJ_DIR$\BSP\bsp.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uC-CPU\cpu_core.h</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uC-CPU\cpu_def.h</file>
+            <file>$PROJ_DIR$\OS2\includes.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\app.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_flag.pbi</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_flag.c</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_time.r43</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_time.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uC-CPU\cpu_core.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mutex.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_dbg.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mbox.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mem.c</file>
+            <file>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_core.c</file>
+            <file>$PROJ_DIR$\OS2\app_cfg.h</file>
+            <file>$PROJ_DIR$\OS2\app_hooks.c</file>
+            <file>$PROJ_DIR$\OS2\cpu_cfg.h</file>
+            <file>$PROJ_DIR$\OS2\app.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_mbox.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\msp430f149.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\in430.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\ucos_demo.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_cpu_a.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_dbg.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_tmr.r43</file>
+            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_cpu_c.pbi</file>
+            <file>$PROJ_DIR$\Debug\Exe\ucos_demo.ulp</file>
+            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_dbg.pbi</file>
+            <file>$PROJ_DIR$\Debug\Exe\ucos_demo.txt</file>
+            <file>$PROJ_DIR$\Debug\Obj\os_cpu_c.r43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430f149.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+            <file>$TOOLKIT_DIR$\config\linker\multiplier.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\ucos_demo.map</file>
+            <file>$PROJ_DIR$\..\freertos_demo\source\include\FreeRTOSConfig.h</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 81 86</file>
+                </tool>
+                <tool>
+                    <name>ULP430</name>
+                    <file> 78</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_task.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 8</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 34 32 61 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_cpu_a.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 71</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 36 66</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_cpu_c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 82</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 77</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33 61 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_tmr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 12</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_sem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 5</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 11</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32 34 61 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_q.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 4</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\BSP\bsp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 75</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 52 76 0 3 79 18 35 10 20 7 19 21 25 68 36 66 69 74 67 61 37 47 63 33 32 44 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 76 67 79 0 20 66 61 21 32 52 68 37 34 35 18 69 47 19 25 36 33 44 7 3 10 48 74 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_flag.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32 34 61 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_time.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uC-CPU\cpu_core.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 6</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 46 37 47 63 29</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 47 46 63 29 37</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mutex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Ports\os_dbg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 80</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32 61 33 34</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mbox.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 26</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_mem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 27</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61 33 34 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\uCOS_II\uCOS-II\Source\os_core.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 23</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34 61 32 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32 34 61 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\OS2\app_hooks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 52 76 0 3 79 18 35 10 20 7 19 21 25 68 36 66 69 74 67 61 37 47 63 33 32 44 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 76 67 79 0 20 66 61 21 32 52 68 37 34 35 18 69 47 19 25 36 33 44 7 3 10 48 74 63</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\OS2\app.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 49</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 52 76 0 3 79 18 35 10 20 7 19 21 25 68 36 66 69 74 67 61 37 47 63 33 32 44 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33 0 76 66 47 19 7 35 36 79 25 61 44 18 20 69 32 52 21 68 67 37 34 3 10 74 63 48</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\ucos_demo.txt</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 83 85 49 9 75 6 23 71 82 72 15 26 1 17 24 5 8 53 73 84</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

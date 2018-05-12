@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>884782045</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\source\board\flash.c</file>
+            <file>$PROJ_DIR$\source\include\bsp.h</file>
+            <file>$PROJ_DIR$\source\include\FreeRTOSConfig.h</file>
+            <file>$PROJ_DIR$\source\main.c</file>
+            <file>$PROJ_DIR$\source\board\bsp.c</file>
+            <file>$PROJ_DIR$\source\include\flash.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stream_buffer.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\stream_buffer.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\timers.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\timers.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\port.c</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\portext.s43</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\croutine.c</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\list.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\event_groups.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\heap_1.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430f149.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\port.r43</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\queue.c</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\timers.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\stream_buffer.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\bsp.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\heap_1.c</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\event_groups.c</file>
+            <file>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\tasks.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\event_groups.r43</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\portmacro.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\heap_1.r43</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\FreeRTOS.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\freertos_demo.ulp</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\port.pbi</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\task.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\freertos_demo.pbd</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\mpu_wrappers.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\flash.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\croutine.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\tasks.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\queue.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\in430.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\portable.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\queue.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\portext.r43</file>
+            <file>$PROJ_DIR$\Debug\Obj\list.r43</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stddef.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\projdefs.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\list.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\deprecated_definitions.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\tasks.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\freertos_demo.txt</file>
+            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\list.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\croutine.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\multiplier.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\freertos_demo.map</file>
+            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\stack_macros.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430f149.xcl</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\croutine.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\event_groups.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\timers.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\stream_buffer.h</file>
+            <file>$TOOLKIT_DIR$\inc\dlib\c\string.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\queue.h</file>
+            <file>$PROJ_DIR$\..\FreeRTOS\include\portasm.h</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 61 69</file>
+                </tool>
+                <tool>
+                    <name>ULP430</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\board\flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 17</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 1 5</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 64 27 56 33 39 46 12 60 66 47 32 57 35 50 67 55 2 49 25 20 41 48 1 62 58 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 1 5</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 64 27 56 33 39 46 12 60 66 47 32 57 35 50 67 55 2 49 25 20 41 48 1 62 58 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\board\bsp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 26</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 33 20 47 62 25 1 66 27 64 50 19 60 12 67</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 47 1 66 67 25 20 62 27 50 64 33 12 19 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\stream_buffer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 66 27 64 50 19 60 12 67 77 46 35 55 2 33 20 47 62 25 56 49 58 32 41 39 57 76</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 2 62 27 64 39 33 67 55 49 46 47 58 77 35 76 12 19 60 66 56 25 20 41 32 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 21</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 35 55 27 64 50 19 60 12 67 46 66 2 33 20 47 62 25 56 49 58 32 41 39 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 67 56 64 47 66 27 33 58 39 55 2 49 46 12 19 60 25 20 62 32 35 41 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\portext.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 2 33 20 25 79</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\croutine.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 35 55 27 64 50 19 60 12 67 46 66 2 33 20 47 62 25 56 49 58 32 41 39 57 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64 47 66 50 56 67 33 41 39 55 2 49 27 46 12 19 60 25 20 62 58 35 73 32 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 63</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64 47 50 67 27 56 62 57 12 32 35 46 19 60 66 33 58 48 55 2 49 25 20 41</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 77 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56 19 64 33 39 27 46 12 60 66 77 35 78 50 67 55 2 49 25 20 47 62 58 48 41 32 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\timers.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 78 75</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46 25 47 64 49 78 67 55 35 12 50 27 2 20 32 57 39 75 19 60 66 56 33 41 48 62 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\portable\heap_1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 18</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 12 27 20 64 2 35 67 55 49 46 25 47 32 57 39 19 60 66 56 33 41 48 62 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\event_groups.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 31</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 75 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 27 12 20 50 75 64 2 35 67 55 49 46 25 47 32 57 39 74 19 60 66 56 33 41 48 62 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\Source Code\msp430\FreeRTOS\tasks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 48 27 64 50 19 60 12 67 46 77 35 55 66 2 33 20 47 62 25 56 49 58 32 41 39 57 75 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46 64 39 12 50 27 2 33 41 71 67 55 49 77 35 75 19 60 66 56 47 32 57 48 25 20 62 58</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\freertos_demo.txt</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 72 68 26 43 31 42 34 54 51 21 53 45 24 44 9 70</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

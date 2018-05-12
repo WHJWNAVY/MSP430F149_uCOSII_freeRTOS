@@ -1,0 +1,351 @@
+/*
+ * FreeRTOS Kernel V10.0.1
+ * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * http://www.FreeRTOS.org
+ * http://aws.amazon.com/freertos
+ *
+ * 1 tab == 4 spaces!
+ */
+
+/*
+ * Creates all the demo application tasks, then starts the scheduler.  The WEB
+ * documentation provides more details of the demo application tasks.
+ *
+ * This demo is configured to execute on the ES449 prototyping board from
+ * SoftBaugh. The ES449 has a built in LCD display and a single built in user
+ * LED.  Therefore, in place of flashing an LED, the 'flash' and 'check' tasks
+ * toggle '*' characters on the LCD.  The left most '*' represents LED 0, the
+ * next LED 1, etc.
+ *
+ * Main. c also creates a task called 'Check'.  This only executes every three
+ * seconds but has the highest priority so is guaranteed to get processor time.
+ * Its main function is to check that all the other tasks are still operational.
+ * Each task that does not flash an LED maintains a unique count that is
+ * incremented each time the task successfully completes its function.  Should
+ * any error occur within such a task the count is permanently halted.  The
+ * 'check' task inspects the count of each task to ensure it has changed since
+ * the last time the check task executed.  If all the count variables have
+ * changed all the tasks are still executing error free, and the check task
+ * toggles an LED with a three second period.  Should any task contain an error
+ * at any time the LED toggle rate will increase to 500ms.
+ *
+ * Please read the documentation for the MSP430 port available on
+ * http://www.FreeRTOS.org.
+ */
+
+/* Standard includes. */
+#include <stdlib.h>
+
+/* Scheduler includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+
+#include "bsp.h"
+#include "flash.h"
+
+/* Demo task priorities. */
+#define MAX_LED_TASK_NUM                8
+#define mainSTART_TASK_PRIORITY			( tskIDLE_PRIORITY + 10 )
+#define mainLED1_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED2_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED3_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED4_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED5_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED6_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED7_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED8_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainLED_TASK_PRIORITY			( tskIDLE_PRIORITY + 1 )
+#define mainSTART_TASK_STACK_SIZE	    configMINIMAL_STACK_SIZE
+#define mainLED_TASK_STACK_SIZE		    configMINIMAL_STACK_SIZE
+
+TaskHandle_t mainSTART_TASK_Handle;
+TaskHandle_t mainLED_TASK_Handle[MAX_LED_TASK_NUM];
+/*-----------------------------------------------------------*/
+
+#if 0
+#define MAIN_LED_TASK_FUNC(vLEDFlashTask, pvParameter)  \
+portTASK_FUNCTION( vLEDFlashTask, pvParameter )\
+{\
+    TickType_t xFlashRate;\
+    TickType_t xLastFlashTime;\
+    uint8_t uxLED = 0;\
+    uxLED  = *((uint8_t*)pvParameter);\
+    xFlashRate = 200 * (uxLED + 1);\
+    xFlashRate /= portTICK_PERIOD_MS;\
+    xFlashRate /= ( TickType_t ) 2;\
+    xLastFlashTime = xTaskGetTickCount();\
+    while(1)\
+    {\
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );\
+        prvOnBoardLEDToggle( uxLED );\
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );\
+        prvOnBoardLEDToggle( uxLED );\
+    }\
+}
+#endif
+
+portTASK_FUNCTION( vStartTask, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask1, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask2, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask3, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask4, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask5, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask6, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask7, pvParameters );
+portTASK_FUNCTION( vLEDFlashTask8, pvParameters );
+
+/*
+ * Start the demo application tasks - then start the real time scheduler.
+ */
+int main( void )
+{
+    /* Setup the hardware ready for the demo. */
+    prvSetupHardware();
+
+    /* Start the standard demo application tasks. */
+    //vStartLEDFlashTasks( mainLED_TASK_PRIORITY );
+
+    /* Start the 'Check' task which is defined in this file. */
+    xTaskCreate( vStartTask, "Start", mainSTART_TASK_STACK_SIZE, NULL, 
+        mainSTART_TASK_PRIORITY, (TaskHandle_t *)&mainSTART_TASK_Handle );
+
+    /* Start the scheduler. */
+    vTaskStartScheduler();
+
+    /* As the scheduler has been started the demo applications tasks will be
+    executing and we should never get here! */
+    return 0;
+}
+/*-----------------------------------------------------------*/
+
+
+portTASK_FUNCTION( vStartTask, pvParameters )
+{
+    uint8_t ledi = 0;
+
+    taskENTER_CRITICAL();
+    xTaskCreate(vLEDFlashTask1, "LED1", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED1_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask2, "LED2", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED2_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask3, "LED3", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED3_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask4, "LED4", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED4_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask5, "LED5", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED5_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask6, "LED6", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED6_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask7, "LED7", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED7_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    xTaskCreate(vLEDFlashTask8, "LED8", mainLED_TASK_STACK_SIZE, &ledi, 
+        mainLED8_TASK_PRIORITY, (TaskHandle_t *)&mainLED_TASK_Handle[ledi++]);
+
+    vTaskDelete(mainSTART_TASK_Handle);
+
+    taskEXIT_CRITICAL();
+
+}
+
+portTASK_FUNCTION( vLEDFlashTask1, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 0;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask2, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 1;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask3, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 2;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask4, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 3;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask5, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 4;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask6, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 5;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask7, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 6;
+    //uxLED  = *((uint8_t*)pvParameters);
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+    xFlashRate /= ( TickType_t ) 2;
+    xLastFlashTime = xTaskGetTickCount();
+    while(1)
+    {
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+    }
+}
+
+portTASK_FUNCTION( vLEDFlashTask8, pvParameters )
+{
+    TickType_t xFlashRate;
+    TickType_t xLastFlashTime;
+    uint8_t uxLED = 7;
+    //uint8_t temp = 0;
+
+    (void)pvParameters;
+
+    /* The parameters are not used. */
+    uxLED  = *((uint8_t*)pvParameters);
+
+    xFlashRate = 200 * (uxLED + 1);
+    xFlashRate /= portTICK_PERIOD_MS;
+
+    /* We will turn the LED on and off again in the delay period, so each
+    delay is only half the total period. */
+    xFlashRate /= ( TickType_t ) 2;
+
+    /* We need to initialise xLastFlashTime prior to the first call to
+    vTaskDelayUntil(). */
+    xLastFlashTime = xTaskGetTickCount();
+
+    while(1)
+    {
+        /* Delay for half the flash period then turn the LED on. */
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+
+        /* Delay for half the flash period then turn the LED off. */
+        vTaskDelayUntil( &xLastFlashTime, xFlashRate );
+        prvOnBoardLEDToggle( uxLED );
+#if 0
+        if(temp != uxLED)
+        {
+            taskENTER_CRITICAL();
+            vTaskDelete(mainLED_TASK_Handle[temp]);
+            taskEXIT_CRITICAL();
+            temp++;
+        }
+#endif
+    }
+}
+
